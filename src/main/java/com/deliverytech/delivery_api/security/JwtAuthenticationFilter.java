@@ -44,6 +44,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private String recoverToken(HttpServletRequest request){
         var authHeader = request.getHeader("Authorization");
         if(authHeader == null) return null;
-        return authHeader.replace("Bearer ", "");
+        return authHeader.replace("Bearer", "");
     }
 }
